@@ -1,0 +1,34 @@
+.container{
+    display: grid;
+    width: 80%;
+    height: 100%;
+    border: 2px solid black;
+    background-color: blueviolet;
+    grid-template: 100px 1fr / 1fr 2fr;
+}
+
+.header{
+    background-color: lightgoldenrodyellow;
+    grid-column: 2/3;
+}
+
+.sidebar{
+    background-color: lightblue;
+    grid-row: 1/3;
+}
+
+.main-panel{
+    background-color: lightcoral;
+}
+
+.project{
+    background-color: blanchedalmond;
+}
+
+.new{
+    background-color: aquamarine;
+}
+
+.trending{
+    background-color: lightslategray;
+}
