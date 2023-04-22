@@ -7,6 +7,10 @@
     grid-template: 100px 1fr / 1fr 1fr 1fr;
 }
 
+.container--sidebarHidden {
+    grid-template-columns: 12rem 1fr 1fr;
+}  
+  
 .header{
     background-color: lightgoldenrodyellow;
     grid-column: 2/4;
@@ -35,3 +39,91 @@
 .trending{
     background-color: lightslategray;
 }
+*,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  font-family: Arial, Verdana, sans-serif;
+}
+
+.sidebar {
+  padding: 0;
+  transition: transform 300ms ease-in;
+}
+
+.sidebar.sidebar--isHidden {
+  transform: translateX(-12rem);
+  transition: transform 300ms ease-out;
+}
+
+/* .sidebar-menu {
+  list-style: none;
+  padding: 1.5rem;
+  margin-top: 0;
+} */
+
+.sidebar-menu__item {
+  display: block;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-menu__item a {
+  color: #e9c46a;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar-menu__item a:hover {
+  color: #e76f51;
+  transition: color 150ms linear;
+}
+
+.content {
+  background-color: #2a9d8f;
+  padding: 2rem;
+  height: 100vh;
+  color: white;
+}
+
+#toggle {
+  background-color: #e9c46a;
+  border: 2px solid #f4a261;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  transition: all 150ms linear;
+  justify-self: end;
+  border-radius: 2rem;
+}
+
+#toggle:hover {
+  background-color: #f4a261;
+  transition: all 150ms ease-in;
+}
+
+#toggle:active{
+  background-color: red;
+}
+
+.toggle-button{
+  position: absolute; /* Absolute positioning */
+  left: 12rem; /* Position it at the edge of the sidebar */
+  top: 1rem;
+  background: none; /* Remove default button background */
+  border: none; /* Remove default button border */
+  cursor: pointer;
+  transition: left 300ms ease-in; /* Add transition for smooth movement */
+}
+
+.container.sidebar--isHidden .toggle-button {
+  left: 0; /* Move the button to the left edge when the sidebar is hidden */
+  transition: left 300ms ease-out; /* Add transition for smooth movement */
+}
+
+.toggle-image {
+    height: 20px !important;
+    width: auto !important;
+  }

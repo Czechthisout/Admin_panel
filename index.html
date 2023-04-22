@@ -10,7 +10,23 @@
 <body>
     <div class="container">
         <div class="header">header</div>
-        <div class="sidebar">sidebar</div>
+        <div class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-home" aria-hidden="true"></i>Home</a></li>
+                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-user" aria-hidden="true"></i>Profile</a></li>
+                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-envelope" aria-hidden="true"></i>Messages</a></li>
+                <li class="sidebar-menu__item"><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>About</a></li>
+                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-history" aria-hidden="true"></i>History</a></li>
+                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-tasks" aria-hidden="true"></i>Tasks</a></li>
+                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-users" aria-hidden="true"></i>Communities</a></li>
+                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-cog" aria-hidden="true"></i>Settings</a></li>
+                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-hands-helping" aria-hidden="true"></i>Support</a></li>
+                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-user-shield" aria-hidden="true"></i>Privacy</a></li>
+            </ul>
+        </div>
+        <button id="toggle" class="toggle-button">
+            <img src="./open-close.png" alt="Toggle sidebar" class="toggle-image"/>
+        </button>
         <div class="project-panel">
             <div class="project">P1</div>
             <div class="project">P2</div>
@@ -24,5 +40,6 @@
             <div class="trending">Trending</div>
         </div>
     </div>
+    <script src="admin_portal.js"></script>
 </body>
 </html>
