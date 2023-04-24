@@ -3,12 +3,13 @@
   --hover-color: #2cd0bd;
   --secondary-color: #fc4a1a;
   --accent-color: #f7b733;
-  --text-color: #dfdce3;
+  /* --text-color: #dfdce3; */
+  --text-color: black;
   --border-color: #2c3e50;
 }
 
 .card {
-  /* background-color: #ffffff; */
+  /* background-color: var(--accent-color); */
   border-radius: 8px;
   box-shadow: var(--shadow-elevation-medium);
   padding: 1rem;
@@ -18,7 +19,7 @@
 }
 
 .project:hover {
-  background-color: var(--hover-color);
+  background-color: var(--accent-color);
   transform: translateX(-5px);
 }
 
@@ -27,6 +28,9 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  font-family: 'Alkatra', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'VT323', monospace;
 }
 
 /* Apply the new colors to the elements */
@@ -70,10 +74,13 @@ body {
 
 .sidebar{
   height: 100%;
-  border: 2px solid black;
+  border-right: 2px solid black;
   border-top: 40px;
   padding: 10px;
   transition: transform 300ms ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-panel{
@@ -82,7 +89,7 @@ body {
 }
 
 .project{
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     transition: transform 750ms;
 }
 
@@ -118,7 +125,7 @@ html {
   font-family: 'VT323', monospace;
 }
 .sidebar-menu__item:hover{
-  background-color: var(--hover-color);
+  background-color: var(--secondary-color);
   transform: translateX(-5px);
 }
 
@@ -150,12 +157,12 @@ html {
 
 
 #toggle:hover {
-  background-color: var(--hover-color);
+  background-color: var(--accent-color);
   transition: all 150ms ease-in;
 }
 
 #toggle:active{
-  background-color: var();
+  background-color: var(--accent-color);
 }
 
 .toggle-button {
@@ -215,4 +222,21 @@ html {
   box-shadow: var(--shadow-elevation-medium);
   border: none;
   padding: .5rem;
+}
+
+.odin-progress {
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  background-color: var(--accent-color);
+  height: 20px;
+  width: 0;
+  transition: width 1s;
 }
