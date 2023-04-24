@@ -193,3 +193,8 @@ html {
     20.2px 29.3px 34.7px -3px hsl(var(--shadow-color) / 0.41),
     30.7px 44.4px 52.6px -3.5px hsl(var(--shadow-color) / 0.36);
 }
+
+.calendar {
+  max-width: 1fr;
+  overflow-x: auto;
+}
