@@ -10,14 +10,20 @@
   /* background-color: #ffffff; */
   border-radius: 8px;
   box-shadow: var(--shadow-elevation-medium);
-  padding: 1.5rem;
+  padding: 1rem;
   margin: .5rem;
   position: relative;
   overflow: hidden;
 }
 
+.project:hover {
+  background-color: var(--accent-color);
+  transform: translateX(-5px);
+
+}
+
 body {
-  background-color: var(--primary-color); /* Change to your desired background color */
+  background-color: lightgrey;
   margin: 0;
   padding: 0;
 }
@@ -64,7 +70,8 @@ body {
 }
 
 .project{
-    background-color: blanchedalmond;
+    background-color: var(--primary-color);
+    transition: transform 750ms;
 }
 
 .new{
@@ -93,17 +100,18 @@ html {
   display: block;
   cursor: pointer;
   margin-bottom: 0.5rem;
+  transition: transform 750ms;
 }
+.sidebar-menu__item:hover{
+  background-color: var(--accent-color);
+  transform: translateX(-5px);
+}
+
 
 .sidebar-menu__item a {
   color: var(--text-color);
   text-decoration: none;
   display: block;
-}
-
-.sidebar-menu__item a:hover {
-  color: #e76f51;
-  transition: color 150ms linear;
 }
 
 .content {
