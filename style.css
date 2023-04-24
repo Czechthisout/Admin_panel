@@ -1,5 +1,6 @@
 :root {
   --primary-color: #4abdac;
+  --hover-color: #2cd0bd;
   --secondary-color: #fc4a1a;
   --accent-color: #f7b733;
   --text-color: #dfdce3;
@@ -17,9 +18,8 @@
 }
 
 .project:hover {
-  background-color: var(--accent-color);
+  background-color: var(--hover-color);
   transform: translateX(-5px);
-
 }
 
 body {
@@ -47,6 +47,16 @@ body {
   
 .header{
   grid-column: 2/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondary-description {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-top: 10px;
 }
 
 .sidebar-wrapper {
@@ -103,7 +113,7 @@ html {
   transition: transform 750ms;
 }
 .sidebar-menu__item:hover{
-  background-color: var(--accent-color);
+  background-color: var(--hover-color);
   transform: translateX(-5px);
 }
 
@@ -135,7 +145,7 @@ html {
 
 
 #toggle:hover {
-  background-color: var(--accent-color);
+  background-color: var(--hover-color);
   transition: all 150ms ease-in;
 }
 
