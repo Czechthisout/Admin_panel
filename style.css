@@ -1,31 +1,66 @@
-.container{
-    display: grid;
-    width: 80%;
-    height: 100%;
-    border: 2px solid black;
-    background-color: blueviolet;
-    grid-template: 100px 1fr / 1fr 1fr 1fr;
+:root {
+  --primary-color: #4abdac;
+  --secondary-color: #fc4a1a;
+  --accent-color: #f7b733;
+  --text-color: #dfdce3;
+  --border-color: #2c3e50;
+}
+
+.card {
+  /* background-color: #ffffff; */
+  border-radius: 8px;
+  box-shadow: var(--shadow-elevation-medium);
+  padding: 1.5rem;
+  margin: .5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--primary-color); /* Change to your desired background color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply the new colors to the elements */
+.container, .header, .sidebar, .project-panel, .new {
+  background-color: var(--primary-color);
+}
+
+.container {
+  display: grid;
+  width: 80%;
+  height: 100%;
+  /* border: 2px solid black; */
+  grid-template: 100px 1fr / auto 1fr 1fr;
 }
 
 .container--sidebarHidden {
-    grid-template-columns: 12rem 1fr 1fr;
+  grid-template-columns: 0rem 1fr 1fr;
 }  
   
 .header{
-    background-color: lightgoldenrodyellow;
-    grid-column: 2/4;
+  grid-column: 2/4;
+}
+
+.sidebar-wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  position: relative;
+  grid-row: 1/4;
 }
 
 .sidebar{
-    background-color: lightblue;
-    grid-row: 1/4;
+  height: 100%;
+  border: 2px solid black;
+  border-top: 40px;
+  padding: 10px;
+  transition: transform 300ms ease-in;
 }
 
 .project-panel{
     display: grid;
-    background-color: lightcoral;
     grid-template: 1fr 1fr 1fr/ 1fr 1fr;
-
 }
 
 .project{
@@ -33,11 +68,11 @@
 }
 
 .new{
-    background-color: aquamarine;
+  background-color: var(--primary-color);
 }
 
 .trending{
-    background-color: lightslategray;
+    background-color: var(--primary-color);
 }
 *,
 html {
@@ -49,21 +84,10 @@ html {
   font-family: Arial, Verdana, sans-serif;
 }
 
-.sidebar {
-  padding: 0;
-  transition: transform 300ms ease-in;
-}
-
 .sidebar.sidebar--isHidden {
   transform: translateX(-12rem);
   transition: transform 300ms ease-out;
 }
-
-/* .sidebar-menu {
-  list-style: none;
-  padding: 1.5rem;
-  margin-top: 0;
-} */
 
 .sidebar-menu__item {
   display: block;
@@ -72,7 +96,7 @@ html {
 }
 
 .sidebar-menu__item a {
-  color: #e9c46a;
+  color: var(--text-color);
   text-decoration: none;
   display: block;
 }
@@ -83,39 +107,43 @@ html {
 }
 
 .content {
-  background-color: #2a9d8f;
-  padding: 2rem;
+  background-color: #4abdac;
+  padding: 2rem 3rem;
   height: 100vh;
   color: white;
 }
 
 #toggle {
-  background-color: #e9c46a;
-  border: 2px solid #f4a261;
-  padding: 0.5rem 2rem;
+  position: sticky;
+  background-color: var(--secondary-color);
+  border: 2px solid var(--accent-color);
+  padding: 0.1rem .7rem;
   cursor: pointer;
   transition: all 150ms linear;
   justify-self: end;
   border-radius: 2rem;
+  left: -2.2rem;
 }
 
+
 #toggle:hover {
-  background-color: #f4a261;
+  background-color: var(--accent-color);
   transition: all 150ms ease-in;
 }
 
 #toggle:active{
-  background-color: red;
+  background-color: var();
 }
 
-.toggle-button{
-  position: absolute; /* Absolute positioning */
-  left: 12rem; /* Position it at the edge of the sidebar */
+.toggle-button {
+  position: absolute;
   top: 1rem;
-  background: none; /* Remove default button background */
-  border: none; /* Remove default button border */
+  right: -3rem;
+  background: none;
+  border: none;
   cursor: pointer;
-  transition: left 300ms ease-in; /* Add transition for smooth movement */
+  transition: left 300ms ease-in;
+  box-shadow: var(--shadow-elevation-medium);
 }
 
 .container.sidebar--isHidden .toggle-button {
@@ -127,3 +155,33 @@ html {
     height: 20px !important;
     width: auto !important;
   }
+
+.project-iframe {
+    width: 100%;
+    height: 100%;
+    /* transform-origin: top left;
+    transform: scale(0.5); Adjust the scale value to control the zoom level */
+    border: none;
+}
+
+:root {
+  --shadow-color: 300deg 5% 45%;
+  --shadow-elevation-low:
+    0.2px 0.3px 0.4px hsl(var(--shadow-color) / 0.73),
+    0.4px 0.5px 0.6px -1.7px hsl(var(--shadow-color) / 0.59),
+    1px 1.5px 1.8px -3.5px hsl(var(--shadow-color) / 0.45);
+  --shadow-elevation-medium:
+    0.2px 0.3px 0.4px hsl(var(--shadow-color) / 0.77),
+    0.6px 0.9px 1.1px -1.2px hsl(var(--shadow-color) / 0.66),
+    1.9px 2.8px 3.3px -2.3px hsl(var(--shadow-color) / 0.55),
+    5.1px 7.4px 8.8px -3.5px hsl(var(--shadow-color) / 0.44);
+  --shadow-elevation-high:
+    0.2px 0.3px 0.4px hsl(var(--shadow-color) / 0.71),
+    1.1px 1.6px 1.9px -0.5px hsl(var(--shadow-color) / 0.66),
+    2.3px 3.4px 4px -1px hsl(var(--shadow-color) / 0.61),
+    4.3px 6.2px 7.4px -1.5px hsl(var(--shadow-color) / 0.56),
+    7.6px 11px 13px -2px hsl(var(--shadow-color) / 0.51),
+    12.7px 18.4px 21.8px -2.5px hsl(var(--shadow-color) / 0.46),
+    20.2px 29.3px 34.7px -3px hsl(var(--shadow-color) / 0.41),
+    30.7px 44.4px 52.6px -3.5px hsl(var(--shadow-color) / 0.36);
+}

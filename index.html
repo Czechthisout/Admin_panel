@@ -6,34 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
-        <div class="header">header</div>
-        <div class="sidebar">
-            <ul class="sidebar-menu">
-                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-home" aria-hidden="true"></i>Home</a></li>
-                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-user" aria-hidden="true"></i>Profile</a></li>
-                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-envelope" aria-hidden="true"></i>Messages</a></li>
-                <li class="sidebar-menu__item"><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>About</a></li>
-                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-history" aria-hidden="true"></i>History</a></li>
-                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-tasks" aria-hidden="true"></i>Tasks</a></li>
-                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-users" aria-hidden="true"></i>Communities</a></li>
-                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-cog" aria-hidden="true"></i>Settings</a></li>
-                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-hands-helping" aria-hidden="true"></i>Support</a></li>
-                <li class="sidebar-menu__item"><a href="#"><i class="fas fa-user-shield" aria-hidden="true"></i>Privacy</a></li>
-            </ul>
+    <div class="container card">
+        <div class="header card">header</div>
+        <div class="sidebar-wrapper">
+            <div class="sidebar">
+                <ul class="sidebar-menu">
+                    <li class="sidebar-menu__item card"><a href="#"><i class="fas fa-home" aria-hidden="true"></i>Home</a></li>
+                    <li class="sidebar-menu__item card"><a href="#"><i class="fas fa-user" aria-hidden="true"></i>Profile</a></li>
+                    <li class="sidebar-menu__item card"><a href="#"><i class="fas fa-envelope" aria-hidden="true"></i>Messages</a></li>
+                    <li class="sidebar-menu__item card"><a href="#"><i class="fas fa-info-circle" aria-hidden="true"></i>About</a></li>
+                    <li class="sidebar-menu__item card"><a href="#"><i class="fas fa-history" aria-hidden="true"></i>History</a></li>
+                    <li class="sidebar-menu__item card"><a href="#"><i class="fas fa-tasks" aria-hidden="true"></i>Tasks</a></li>
+                    <li class="sidebar-menu__item card"><a href="#"><i class="fas fa-users" aria-hidden="true"></i>Communities</a></li>
+                    <li class="sidebar-menu__item card"><a href="#"><i class="fas fa-cog" aria-hidden="true"></i>Settings</a></li>
+                </ul>            
+            </div>
+            <button id="toggle" class="toggle-button">
+              <img src="./open-close.png" alt="Toggle sidebar" class="toggle-image" />
+            </button>
         </div>
-        <button id="toggle" class="toggle-button">
-            <img src="./open-close.png" alt="Toggle sidebar" class="toggle-image"/>
-        </button>
         <div class="project-panel">
-            <div class="project">P1</div>
-            <div class="project">P2</div>
-            <div class="project">P3</div>
-            <div class="project">P4</div>
-            <div class="project">P5</div>
-            <div class="project">P6</div>
+            <div class="project card">
+                <iframe class="project-iframe" src="https://czechthisout.github.io/TOP-RPS/" frameborder="0"></iframe>
+            </div>
+            <div class="project card">
+                <iframe class="project-iframe" src="https://czechthisout.github.io/Calculator/" frameborder="0"></iframe>
+            </div>
+            <div class="project card">
+                <iframe src="https://czechthisout.github.io/Etch-a-sketch/" frameborder="0"></iframe>
+            </div>
+            <div class="project card">P4</div>
+            <div class="project card">P5</div>
+            <div class="project card">P6</div>
         </div>
         <div class="dynamic-panel">
             <div class="new"><rssapp-list id="CgE4jhtQkYxjguMU"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script></div>
