@@ -9,4 +9,22 @@
     });
   });
   
+  const sidebar = document.querySelector('.sidebar');
+  const resizer = document.querySelector('.sidebar-resizer');
+  let isResizing = false;
   
+  resizer.addEventListener('mousedown', (e) => {
+    isResizing = true;
+    e.preventDefault();
+  });
+  
+  document.addEventListener('mousemove', (e) => {
+    if (!isResizing) return;
+    const minWidth = 60; // Set the minimum width of the sidebar
+    const newWidth = Math.max(minWidth, e.clientX - sidebar.getBoundingClientRect().left);
+    sidebar.style.width = newWidth + 'px';
+  });
+  
+  document.addEventListener('mouseup', () => {
+    isResizing = false;
+  });
