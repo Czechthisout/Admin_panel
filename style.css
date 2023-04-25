@@ -226,20 +226,36 @@ html {
     20.2px 29.3px 34.7px -3px hsl(var(--shadow-color) / 0.41),
     30.7px 44.4px 52.6px -3.5px hsl(var(--shadow-color) / 0.36);
 }
-
-.calendar {
-  transform: scale(0.95);
+.calendar-wrapper{
+  /* transform: scale(0.95); */
   overflow-x: auto;
   box-shadow: var(--shadow-elevation-medium);
   border: none;
-  /* padding: .5rem; */
+  padding: .5rem;
   background-color: var(--primary-color);
-  gap: 10px;
+  gap: 40px;
   transition: transform 750ms;
-
+}
+.calendar-wrapper h3{
+  font-size: 1.4rem;
 }
 
-.calendar:hover{
+.calendar-header {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the space between the text and logo */
+}
+
+.github-logo{
+  height: 20px;
+  width: auto;
+}
+
+.calendar {
+  
+}
+
+.calendar-wrapper:hover{
   background-color: var(--accent-color);
   transform: translateX(-5px);
 }
