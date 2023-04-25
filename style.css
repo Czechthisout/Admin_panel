@@ -87,7 +87,7 @@ body {
   border-right: 2px solid black;
   border-top: 40px;
   padding: 10px;
-  transition: transform 300ms ease-in;
+  transition: transform 750ms ease-in;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,7 +123,7 @@ html {
 
 .sidebar.sidebar--isHidden {
   transform: translateX(-12rem);
-  transition: transform 300ms ease-out;
+  transition: transform 750ms ease-out;
 }
 
 .sidebar-menu__item {
@@ -160,7 +160,7 @@ html {
   border: 2px solid var(--accent-color);
   padding: 0.1rem .7rem;
   cursor: pointer;
-  transition: all 150ms linear;
+  transition: all 750ms linear;
   justify-self: end;
   border-radius: 2rem;
   left: -2.2rem;
@@ -169,7 +169,7 @@ html {
 
 #toggle:hover {
   background-color: var(--accent-color);
-  transition: all 150ms ease-in;
+  transition: all 750ms ease-in;
 }
 
 #toggle:active{
@@ -189,7 +189,7 @@ html {
 
 .container.sidebar--isHidden .toggle-button {
   left: 0; /* Move the button to the left edge when the sidebar is hidden */
-  transition: left 300ms ease-out; /* Add transition for smooth movement */
+  transition: left 750ms ease-out; /* Add transition for smooth movement */
 }
 
 .toggle-image {
@@ -235,6 +235,8 @@ html {
   /* padding: .5rem; */
   background-color: var(--primary-color);
   gap: 10px;
+  transition: transform 750ms;
+
 }
 
 .calendar:hover{
@@ -249,6 +251,8 @@ html {
   border-radius: .5rem;
   background-color: var(--primary-color);
   margin: .5rem;
+  transition: transform 750ms;
+
 }
 
 .odin-progress:hover{
@@ -311,8 +315,14 @@ html {
 }
 
 .status{
+  display: grid;
   background-color: var(--primary-color);
   box-shadow: var(--shadow-elevation-medium);
+  transition: transform 750ms;
+}
 
+.status:hover{
+  background-color: var(--accent-color);
+  transform: translateX(-5px);
 }
 
