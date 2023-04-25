@@ -6,6 +6,7 @@
   /* --text-color: #dfdce3; */
   --text-color: black;
   --border-color: #2c3e50;
+  --course-complete: #44e034;
 }
 
 .card {
@@ -85,7 +86,7 @@ body {
 
 .project-panel{
     display: grid;
-    grid-template: 1fr 1fr 1fr/ 1fr 1fr;
+    grid-template: 1fr 1fr 1fr/ 1fr;
 }
 
 .project{
@@ -226,6 +227,9 @@ html {
 
 .odin-progress {
   margin-bottom: 1rem;
+  border: 1px solid lightgray; 
+  box-shadow: var(--shadow-elevation-medium);
+  border-radius: 3px;
 }
 
 .progress-bar {
@@ -239,4 +243,16 @@ html {
   height: 20px;
   width: 0;
   transition: width 1s;
+}
+
+.progress-indicators{
+  display: flex;
+  justify-content: space-around;
+}
+
+.badge {
+  width: 50px;
+  height: 50px;
+  background-color: lightgray;
+  margin: 10px;
 }
