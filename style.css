@@ -368,3 +368,30 @@ a{
 a:hover{
   text-decoration: underline;
 }
+
+/* table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f8f8;
+} */
+
+tr:hover {
+  background-color: #e6e6e6;
+}
+
+.accepted:hover {
+  cursor: pointer;
+}
