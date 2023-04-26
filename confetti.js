@@ -1,19 +1,13 @@
-import JSConfetti from 'js-confetti'
-
-const acceptedCells = document.querySelectorAll('.accepted');
+const accepted = document.querySelector('.accepted');
 
 // Create a new JSConfetti instance
 const jsConfetti = new JSConfetti();
 
-acceptedCells.forEach(cell => {
-    // Add a click event listener for each "accepted" cell
-    cell.addEventListener('click', () => {
-        shootConfetti();
-    });
-});
+accepted.addEventListener('click', shootConfetti);
 
 function shootConfetti() {
     // Call the addConfetti method from the jsConfetti instance
+    console.log('Shooting confetti...');
     jsConfetti.addConfetti({
         emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
         confettiColors: [
